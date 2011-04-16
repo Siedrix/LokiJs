@@ -8,6 +8,10 @@ production = {
 		'jquery':'http://code.jquery.com/jquery-latest.js',
 		'jquery.tmpl':'http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js',
 		'underscore':'http://documentcloud.github.com/underscore/underscore-min.js'
+	},
+	templates:{
+		'termination':'',
+		'base-url':''
 	}
 }
 
@@ -18,7 +22,15 @@ development = {
 		'underscore':'src/underscore-min.js',
 		'loki-core':'lib/loki-core.js',
 		'loki-console':'lib/loki-console.js',
+		'loki-template':'lib/loki-template.js',
 		'loki-ajax':'lib/loki-ajax.js'
+	},
+	templates:{
+		'termination':'html',
+		'baseUrl':'http://localhost/dev/lokijs/LokiJs-jquery1.5/templates/'
+	},
+	ajax :{
+		baseUrl:'http://localhost/dev/lokijs/LokiJs-jquery1.5/json/'
 	}
 }
 
