@@ -1,1 +1,6 @@
+Has 3 directories
+-src for local libraries
+-lib for lokijs files
+-app for app files
+
 Has a enviroments

@@ -1,5 +1,5 @@
 config = {
-	'status':'production'
+	'status':'development'
 }
 
 production = {
@@ -13,13 +13,19 @@ production = {
 development = {
 	scripts : {
 		'jquery':'src/jquery-1.5.2.js',
-		'jquery.tmpl':'src/jquery.tmpl.js',
-		'underscore':'src/underscore-min.js'
+		'jqueryTmpl':'src/jquery.tmpl.js',
+		'underscore':'src/underscore-min.js',
+		'loki-core':'lib/loki-core.js'
 	}
 }
 
 yepnope({
 	test: config.status == 'production',
 	yep: production.scripts,
-	nope: development.scripts
+	nope: development.scripts,
+	complete: function(){
+		yepnope({
+			load : 'app/main.js'
+		});
+	}
 })
