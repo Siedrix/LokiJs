@@ -1,3 +1,3 @@
 $L(document).ready(function(){
-	console.log('lets rock');
+	$L.console.log({type:'start',message:'lets rock'});
 })

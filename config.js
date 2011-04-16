@@ -15,7 +15,9 @@ development = {
 		'jquery':'src/jquery-1.5.2.js',
 		'jqueryTmpl':'src/jquery.tmpl.js',
 		'underscore':'src/underscore-min.js',
-		'loki-core':'lib/loki-core.js'
+		'loki-core':'lib/loki-core.js',
+		'loki-console':'lib/loki-console.js',
+		'loki-ajax':'lib/loki-ajax.js'
 	}
 }
 
