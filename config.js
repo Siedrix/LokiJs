@@ -1,5 +1,6 @@
 config = {
-	'status':'development'
+	'status':'development',
+	'debbug':false
 }
 
 production = {
