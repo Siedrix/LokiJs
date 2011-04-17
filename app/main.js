@@ -3,9 +3,20 @@ $L(document).ready(function(){
 	
 	$L.render({
 		url:'example.php',
-		template:'dance',
+		template:'example',
 		success:function(data){
-			console.log(data);
+			console.log('loaded first time');
 		}
-	})
+	});
+
+	setTimeout(function(){
+		$L.render({
+			url:'example.php',
+			template:'example',
+			success:function(data){
+				console.log('loaded second time');
+				//console.log(data);
+			}
+		});
+	},500);
 });
