@@ -8,7 +8,7 @@ production = {
 		'jquery':'http://code.jquery.com/jquery-latest.js',
 		'jquery.tmpl':'http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js',
 		'underscore':'http://documentcloud.github.com/underscore/underscore-min.js',
-		'lokiJs':'Loki.js'
+		'lokiJs':'https://github.com/Siedrix/LokiJs/raw/master/Loki.js'
 	},
 	templates:{
 		termination:'html',
