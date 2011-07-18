@@ -1,5 +1,5 @@
 config = {
-	'status':'production',
+	'status':'development',
 	'debbug':true
 }
 
@@ -24,27 +24,16 @@ development = {
 		jquery:'src/jquery-1.5.2.js',
 		jqueryTmpl:'src/jquery.tmpl.js',
 		underscore:'src/underscore-min.js',
-		lokiCore:'lib/loki-core.js',
+		//lokiCore:'lib/loki-core.js',
 		lokiConsole:'lib/loki-console.js',
 		lokiTemplate:'lib/loki-template.js',
 		lokiAjax:'lib/loki-ajax.js'
 	},
 	templates:{
 		termination:'html',
-		baseUrl:'http://localhost/dev/lokijs/LokiJs-jquery1.5/templates/'
+		baseUrl:'templates/'
 	},
 	ajax :{
-		baseUrl:'http://localhost/dev/lokijs/LokiJs-jquery1.5/json/'
+		baseUrl:'json/'
 	}
 }
-
-yepnope({
-	test: config.status == 'production',
-	yep: production.scripts,
-	nope: development.scripts,
-	complete: function(){
-		yepnope({
-			load : 'app/main.js'
-		});
-	}
-});
