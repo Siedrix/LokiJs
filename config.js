@@ -1,6 +1,7 @@
 config = {
-	'status':'development',
-	'debbug':true
+	status	 : 'development',
+	debbug	 : true,
+	mainArea : '#main'
 }
 
 production = {
@@ -26,6 +27,7 @@ development = {
 		underscore:'src/underscore-min.js',
 		lokiCore:'lib/loki-core.js',
 		lokiConsole:'lib/loki-console.js',
+		lokiController:'lib/loki-controller.js',
 		lokiTemplate:'lib/loki-template.js',
 		lokiAjax:'lib/loki-ajax.js'
 	},

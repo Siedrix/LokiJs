@@ -1,25 +1,25 @@
 $(document).ready(function(){
 	$L.console.log({type:'start',message:'lets rock'});
-	
-	setTimeout(function(){
-		$L.render({
-			url:'example.php',
-			template:'example',
-			success:function(data){
-				console.log('loaded first time');
-				console.log(data);
-			}
-		});
-	},500);
 
-	setTimeout(function(){
-		$L.render({
-			url:'example.php',
-			template:'example',
-			success:function(data){
-				console.log('loaded second time');
-				console.log(data);
+	$L.Controller('Blog',{
+		Single : {
+			'data'		: 'example.php',
+			'template'  : 'example',
+			'before'	: function(){
+				$('#main').html('');
 			}
-		});
-	},1500);
+		},
+		List :	{
+			'data': 'Someurl',
+			'template' : 'Some Template',
+		}
+	});
+	$L.Controller('Links',{
+		List : function(){
+			console.log('This is a single link');
+		},
+		Single : function(){
+			console.log('This is the list of all post');
+		}
+	});
 });
