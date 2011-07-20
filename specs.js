@@ -2,8 +2,8 @@
 Loki.init({
 	enviroment : '',
 	debbug : '',
-	initial action : '!/',
-	main area : '#main'
+	initialAction : '!/',
+	mainArea : '#main'
 });
 
 //Loki extend...

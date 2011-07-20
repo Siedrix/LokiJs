@@ -1,6 +1,7 @@
 config = {
 	status	 : 'development',
 	debbug	 : true,
+	initialAction : '#!/Blog/Single',
 	mainArea : '#main'
 }
 
@@ -22,18 +23,19 @@ production = {
 
 development = {
 	scripts : {
-		jquery:'src/jquery-1.5.2.js',
-		jqueryTmpl:'src/jquery.tmpl.js',
-		underscore:'src/underscore-min.js',
-		lokiCore:'lib/loki-core.js',
-		lokiConsole:'lib/loki-console.js',
-		lokiController:'lib/loki-controller.js',
-		lokiTemplate:'lib/loki-template.js',
-		lokiAjax:'lib/loki-ajax.js'
+		underscore	   :'src/underscore-min.js',
+		jquery1		   :'src/jquery-1.5.2.js',
+		jqueryTmpl	   :'src/jquery.tmpl.js',
+		hashchange	   :'src/jquery.ba-hashchange.min.js',
+		lokiCore 	   :'lib/loki-core.js',
+		lokiConsole	   :'lib/loki-console.js',
+		lokiController :'lib/loki-controller.js',
+		lokiTemplate   :'lib/loki-template.js',
+		lokiAjax       :'lib/loki-ajax.js'
 	},
 	templates:{
-		termination:'html',
-		baseUrl:'templates/'
+		termination	   :'html',
+		baseUrl		   :'templates/'
 	},
 	ajax :{
 		baseUrl:'json/'
