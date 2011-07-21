@@ -1,5 +1,5 @@
 config = {
-	status	 : 'production',
+	status	 : 'development',
 	debbug	 : true,
 	initialAction : '#!/Blog/Single',
 	mainArea : '#main'
@@ -37,15 +37,15 @@ development = {
 		hashchange	   :'src/jquery.ba-hashchange.min.js',
 	},
 	modules : {
-		lokiCore 	   :'lib/loki-core.js',
-		lokiEvents	   :'lib/loki-events.js',
-		lokiConsole	   :'lib/loki-console.js',
-		lokiController :'lib/loki-controller.js',
-		lokiTemplate   :'lib/loki-template.js',
-		lokiAjax       :'lib/loki-ajax.js'
+		lokiCore 	   :'noCache!lib/loki-core.js',
+		lokiEvents	   :'noCache!lib/loki-events.js',
+		lokiConsole	   :'noCache!lib/loki-console.js',
+		lokiController :'noCache!lib/loki-controller.js',
+		lokiTemplate   :'noCache!lib/loki-template.js',
+		lokiAjax       :'noCache!lib/loki-ajax.js'
 	},
 	application : {
-		main 		   : 'app/main.js'	
+		main 		   :'noCache!app/main.js'	
 	},
 	templates:{
 		termination	   :'html',

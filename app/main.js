@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$L.console.log({type:'start',message:'lets rock'});
 
-	$L.Controller('Blog',{
+	$L.Controller.set('Blog',{
 		Single : {
 			'data'		: 'example.php',
 			'template'  : 'example',
@@ -14,7 +14,7 @@ $(document).ready(function(){
 			'template' : 'Some Template',
 		}
 	});
-	$L.Controller('Links',{
+	$L.Controller.set('Links',{
 		List : function(){
 			console.log('This is a single link');
 		},

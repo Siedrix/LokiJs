@@ -10,6 +10,12 @@
 	//Creates name space
 	var Loki = {};
 
+	//Adds noCache Prefix
+	yepnope.addPrefix('noCache', function (resourceObj) {
+		resourceObj.url = resourceObj.url + '?noCache=' + (new Date()).getTime();
+		return resourceObj;
+	});
+	
 	//Loads in 3 steps
 	yepnope({
 		test: config.dependencies,
