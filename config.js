@@ -1,38 +1,51 @@
 config = {
-	status	 : 'development',
+	status	 : 'production',
 	debbug	 : true,
 	initialAction : '#!/Blog/Single',
 	mainArea : '#main'
 }
 
 production = {
-	scripts : {
-		'jquery':'http://code.jquery.com/jquery-latest.js',
-		'jquery.tmpl':'http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js',
-		'underscore':'http://documentcloud.github.com/underscore/underscore-min.js',
-		'lokiJs':'https://github.com/Siedrix/LokiJs/raw/master/Loki.js'
+	dependencies : {
+		eventemitter   :'src/eventemitter2.js',
+		underscore	   :'src/underscore-min.js',
+		jquery1		   :'src/jquery-1.5.2.js',
+		jqueryTmpl	   :'src/jquery.tmpl.js',
+		hashchange	   :'src/jquery.ba-hashchange.min.js',		
+	},
+	modules : {
+		lokiCore 	   :'Loki.js',
+	},
+	application : {
+		main 		   : 'app/main.js'	
 	},
 	templates:{
-		termination:'html',
-		baseUrl:'http://localhost/dev/lokijs/LokiJs-jquery1.5/templates/'
+		termination	   :'html',
+		baseUrl		   :'templates/'
 	},
-	ajax:{
-		baseUrl:'http://localhost/dev/lokijs/LokiJs-jquery1.5/json/'
+	ajax :{
+		baseUrl:'json/'
 	}
 }
 
 development = {
-	scripts : {
+	dependencies : {
 		eventemitter   :'src/eventemitter2.js',
 		underscore	   :'src/underscore-min.js',
 		jquery1		   :'src/jquery-1.5.2.js',
 		jqueryTmpl	   :'src/jquery.tmpl.js',
 		hashchange	   :'src/jquery.ba-hashchange.min.js',
+	},
+	modules : {
 		lokiCore 	   :'lib/loki-core.js',
+		lokiEvents	   :'lib/loki-events.js',
 		lokiConsole	   :'lib/loki-console.js',
 		lokiController :'lib/loki-controller.js',
 		lokiTemplate   :'lib/loki-template.js',
 		lokiAjax       :'lib/loki-ajax.js'
+	},
+	application : {
+		main 		   : 'app/main.js'	
 	},
 	templates:{
 		termination	   :'html',
