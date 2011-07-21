@@ -1,5 +1,5 @@
 config = {
-	status	 : 'development',
+	status	 : 'production',
 	debbug	 : true,
 	initialAction : '#!/Blog/Single',
 	mainArea : '#main'

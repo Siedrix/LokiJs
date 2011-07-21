@@ -15,7 +15,7 @@
 		resourceObj.url = resourceObj.url + '?noCache=' + (new Date()).getTime();
 		return resourceObj;
 	});
-	
+
 	//Loads in 3 steps
 	yepnope({
 		test: config.dependencies,
@@ -41,7 +41,7 @@
 			location.hash = config.initialAction;
 		}else{
 			$(window).hashchange();								
-		}		
+		}
 	}
 
 	//Binds LokiJs to global object.
