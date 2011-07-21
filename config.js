@@ -23,6 +23,7 @@ production = {
 
 development = {
 	scripts : {
+		eventemitter   :'src/eventemitter2.js',
 		underscore	   :'src/underscore-min.js',
 		jquery1		   :'src/jquery-1.5.2.js',
 		jqueryTmpl	   :'src/jquery.tmpl.js',
