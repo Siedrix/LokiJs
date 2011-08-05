@@ -7,11 +7,14 @@ $(document).ready(function(){
 			'template'  : 'example',
 			'before'	: function(){
 				$('#main').html('');
+			},
+			'after'		: function(data){
+				console.log(data);
 			}
 		},
 		List :	{
-			'data': 'Someurl',
-			'template' : 'Some Template',
+			'data': 'example.php',
+			'template' : 'example'
 		}
 	});
 	$L.Controller.set('Links',{
@@ -21,5 +24,13 @@ $(document).ready(function(){
 		Single : function(){
 			console.log('This is the list of all post');
 		}
+	});
+
+	$L.Events.on('Blog::Single::AfterRender',function(data){
+		console.log('After render',data);
+	});
+
+	$L.Events.on('*::*::AfterRender',function(data){
+		console.log('After render',data);
 	});
 });

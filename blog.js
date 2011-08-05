@@ -13,7 +13,7 @@ Loki.Controller.set('Blog',{
 		'data'     : 'blog/all',
 		'template' : 'blog/itemSmall',
 		'widgets'  : ['Sidebar'],
-		'events'   : {
+		'events'   : [
 			{
 				object      : '.view', 
 				interaction : 'click',
@@ -21,7 +21,7 @@ Loki.Controller.set('Blog',{
 					Loki.Router.get('Blog::Single::'+this.id)
 				}
 			},
-		}, 
+		], 
 		before : function(){
 			//Cleans Main area
 			$(config.mainArea).html('')
@@ -70,7 +70,10 @@ Loki.Controller.set('Blog',{
 });
 
 Loki.Widget.set('Sidebar',{
-	template : 'Sidebar',
+	init : function(){
+
+	},
+	template : 'sidebar/main',
 	el       : '#sidebar',
 	events : {
 		{
@@ -83,23 +86,32 @@ Loki.Widget.set('Sidebar',{
 	},
 	states : {
 		'Open' : function(data){
-			Loki.render(data,'list template');
-		}
+			this.element.find('.'+data).slide();
+		},
+		'Close' : function(data){
+			this.element.find('.'+data).slide();
+		}		
 	}
 	hooks  : {
 		//What to do when you enter the blog area
-		enterBlog : function(data){
-			this.go('Open',data)
+		//Data used in Blog render
+		'Blog::Enter' : function(data){
+			$L.render({
+				data	 : data,
+				template : 'sidebar/list',
+				target   : this.element.find('.blog');
+			});
+			this.set('Open','Blog');
 		},
 		//What to do once you leave the blog area
-		afterBlog : function(){
-
+		'Blog::Leave' : function(){
+			this.set('Close','Blog');
 		}
 	}
 });
 
 Loki.Widget.set('Tags',{
-	...
-})
+	template : 'Sidebar',
+});
 
 

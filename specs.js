@@ -71,7 +71,7 @@ Loki.Controller.set('RegularController',{
 	//Lives in !/RegularController/Single/
 	'Single': {
 		//But uses a http method [get,post,put,delete], default 'get'
-		'methos': 'get'
+		'method': 'get'
 		//Now Single url is 
 		// !/Blog/Single/Some name
 		'params' : '{:name}'
@@ -113,6 +113,10 @@ Loki.Controller.current();
 //Widgets can hook to the router
 //Registes a widget
 Loki.Widget.set('SomeWidget',{
+	//Runs when the widget is created
+	init : function(){
+		
+	}
 	//What template should i use to render this widget
 	template : 'SomeWidget template info',
 	//What data should be use to render this controller
@@ -150,3 +154,13 @@ Loki.Widgets.current();
 
 Loki.Widgets.loaded();
 //Returns loaded widgets
+
+//LokiJs template manager
+//Preatty much what it was build on devhouse, plus localstorage
+
+//LokiJs ajax manager
+//functions needs better semantics...
+Loki.Ajax.fetch('url',callback);
+
+
+
