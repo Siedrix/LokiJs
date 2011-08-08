@@ -1,0 +1,13 @@
+body{}
+#wrapper{
+	margin: 0 auto;
+	width: 960px;
+}
+#main{
+	width: 600px;
+	float: left;	
+}
+#sidebar{
+	width: 340px;
+	float: right;
+}
