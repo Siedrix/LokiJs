@@ -25,7 +25,7 @@ development = {
 	application : {
 		blog 		   :'noCache!app/controllers/blog.js',
 		list 		   :'noCache!app/widgets/list.js',	
-		tags 		   :'noCache!app/widgets/tags.js',
+	//	tags 		   :'noCache!app/widgets/tags.js',
 		main 		   :'noCache!app/main.js'	
 	},
 	templates:{

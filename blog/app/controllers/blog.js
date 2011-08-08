@@ -1,9 +1,12 @@
 Loki.Controller.set('Posts',{
 	'Single': {
 		'params' : '{:name}',
-		'data': 'blog/single/{:name}.php',
+		'data': 'posts/single/{:name}.php',
 		'template' : 'blog/single',
-		'widgets' : ['List','Tags'],
+		'widgets' : [
+			'List'
+		//	,'Tags'
+		],
 		before : function(){
 			$(config.mainArea).html('');
 		},

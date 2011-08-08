@@ -1,10 +1,10 @@
 <div class="item">
 	<h4> ${title} </h4>
-	<p> ${desc} </p>
+	<p> ${description} </p>
 	<p>
 	{{each tags}}
-       <span>${$value} </span>
+       <span>${$value}</span>
     {{/each}}
     </p>
-    <p><a class="view">View Blogpost</a></p>
+    <p><a href="#!/Posts/Single/${id}" class="view-more">View Blogpost</a></p>
 </div>
