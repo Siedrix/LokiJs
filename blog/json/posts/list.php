@@ -14,5 +14,5 @@ $array = array(
 
 $json = json_encode($array);
 
-//header('Content-type: application/json');
+header('Content-type: application/json');
 echo $json;

@@ -1,6 +1,15 @@
 Loki.Widget.set('List',{
 	init : function(){
 		console.log('List widget is loaded');
+		var widget = this;
+		Loki.render({
+			template : widget.template,
+			target   : widget.target,
+			success  : function(data,template,el){
+				widget.element = el;
+				console.log('activate render success',arguments);
+			}
+		});		
 	},
 	template : 'widgets/sidebar/list',
 	target   : '#sidebar',
@@ -22,15 +31,19 @@ Loki.Widget.set('List',{
 		}
 	},
 	hooks  : {
-		'Blog::Enter' : function(data){
+		'Posts::AfterRender' : function(widget,data){
+			console.log('That is widget inside hook declaration?', widget);
 			Loki.render({
 				data	 : data,
-				template : 'sidebar/single',
-				target   : this.element.find('.blog')
+				template : 'widgets/sidebar/single',
+				target   : widget.element.find('#blog'),
+				success  : function(){
+					console.log('List Widget hook to Posts::AfterRender', arguments, widget.element);
+				}
 			});
-			this.set('Open','Blog');
+			//this.set('Open','Blog');
 		},
-		'Blog::Leave' : function(){
+		'Posts::Leave' : function(){
 			this.set('Close','Blog');
 		}
 	}

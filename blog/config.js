@@ -1,7 +1,7 @@
 config = {
 	status	 : 'development',
 	debbug	 : true,
-	initialAction : '#!/Blog/List',
+	initialAction : '#!/Posts/List',
 	mainArea : '#main'
 }
 

@@ -1,4 +1,4 @@
-Loki.Controller.set('Blog',{
+Loki.Controller.set('Posts',{
 	'Single': {
 		'params' : '{:name}',
 		'data': 'blog/single/{:name}.php',
